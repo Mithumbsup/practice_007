@@ -5,6 +5,6 @@ class PostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('title','category','Option','choose_date',)
+        fields = ('title','category','etc_what','Option','choose_date',)
     
     

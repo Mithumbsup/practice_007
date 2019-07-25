@@ -120,6 +120,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
+STATIC_URL = '/static/' # static 파일들이 URL 상에서 위치하는 기본 경로
+STATIC_ROOT = os.path.join(BASE_DIR,'static') # STAIC_ROOT는 실제 css 파일이나 js 파일들이 위치하는 곳
+#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),] # STATICFILES_DIRS 튜플이나 리스트로 입력, app마다 만들어준 static 폴더의 위치를 튜플이나 리스트로 설정한다
+
+MEDIA_URL = '/media/' # 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+
