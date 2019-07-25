@@ -15,7 +15,7 @@ class IndexView(ListView):
     context_object_name = 'post_list' # 디폴트 컨텍스트 변수명 :  object_list
     
     def get_queryset(self): # 컨텍스트 오버라이딩
-      return Post.objects.order_by('Modified_date')[5:]
+      return Post.objects.order_by('Modified_date')[:5]
 
 #create
 def post_new(request):

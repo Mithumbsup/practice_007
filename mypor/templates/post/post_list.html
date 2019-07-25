@@ -13,6 +13,7 @@
        <div>
             <p><a href="{% url 'post:post_new' %}">방 올리기</a></p>
             <p>{{post.title}}</p>
+            <p>{{post.choose_date}}</p>
             <p>수정일: {{ post.Modified_date }}</p>
        </div>
     {%endfor%}
