@@ -2,7 +2,7 @@ from django.utils  import timezone
 from datetime import date 
 from django.db import models
 from multiselectfield import MultiSelectField
-from array_field_select.fields import ArrayField
+#from array_field_select.fields import ArrayField
 
 # Create your models here.
 
@@ -48,7 +48,8 @@ class Post(models.Model):
     context = models.TextField()
     choose_date = models.DurationField() #!!!!!!! 일정 기간을 저장하는 필드를 만들기    
     '''지역 선택'''
-    location = ArrayField( models.CharField(choices=Location_list, max_length=30, default=default_city))
+    #location = ArrayField( models.CharField(choices=Location_list, max_length=30, default=default_city))
+    location = models.CharField(choices=Location_list, max_length=30, default=default_city)
     '''공간 유형 선택'''
     category = MultiSelectField(choices=Category_list, max_length=50, blank=True)
     etc_what = models.CharField(max_length=50, null=True,blank=True)
