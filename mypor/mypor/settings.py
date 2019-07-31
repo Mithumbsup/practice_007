@@ -25,7 +25,7 @@ SECRET_KEY = 'tg&+3phv!sl93r#ou@mx3x29i2&%jrht9w9rs9+^(*7-0!dhyt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [django-env.3mh28nwkm7.us-west-2.elasticbeanstalk.com]
+ALLOWED_HOSTS = ['django-env.3mh28nwkm7.us-west-2.elasticbeanstalk.com']
 
 
 # Application definition
@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'multiselectfield',
-    'array_field_select.fields',
     'post',
 ]
 
